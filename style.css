@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: #dadada;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84vw;
+    height: 80px;
+    border-bottom: 1px grey solid;
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+.logo {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    padding-right: 10%;
+}
+
+.logo svg {
+    width: 100px;
+    height: 30px;
+    color: red;
+    fill: currentColor;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+
+.menu-items ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-items ul li::marker {
+    content: "";
+    display: none;
+}
+
+li .menu-cir {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.icon-inner svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: white;
+    fill: currentColor;
+}
+
+.menu-items ul li a {
+    position: relative;
+    bottom: 0px;
+    color: grey;
+    text-decoration: none;
+}
+
+.menu-items ul li a:hover {
+    position: relative;
+    bottom: 0px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-items ul li a:after {
+    position: absolute;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: red;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.menu-items ul li a:after {
+    bottom: -5px;
+    transform: translateY(10px);
+}
+
+.menu-items ul li a:hover:after {
+    opacity: 1;
+    transform: translateY(7px);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#menu-icon {
+    width: 13.5px;
+    color: white;
+}
+
+#menu-active {
+    color: white;
+}
+
+#menu-active:after {
+    position: absolute;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: red;
+    content: "";
+    opacity: 1;
+    transform: translateY(7px);
+}
