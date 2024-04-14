@@ -35,7 +35,7 @@ nav {
     fill: currentColor;
 }
 
-.menu-items {
+#menu-items {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@ nav {
     width: 60%;
 }
 
-.menu-items ul {
+#menu-items ul {
     display: flex;
     justify-content: space-between;
     padding-top: 45px;
@@ -51,7 +51,7 @@ nav {
     height: 100%;
 }
 
-.menu-items ul li::marker {
+#menu-items ul li::marker {
     content: "";
     display: none;
 }
@@ -71,21 +71,32 @@ li .menu-cir {
     fill: currentColor;
 }
 
-.menu-items ul li a {
+#menu-items ul li a {
     position: relative;
     bottom: 0px;
     color: grey;
     text-decoration: none;
 }
 
-.menu-items ul li a:hover {
+#menu-items ul li a:focus-within,
+#menu-items ul li a:hover {
     position: relative;
     bottom: 0px;
     color: white;
     text-decoration: none;
 }
 
-.menu-items ul li a:after {
+#menu-items ul li a::after:focus-within {
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: red;
+    content: "";
+    opacity: 0;
+}
+
+#menu-items ul li a:after {
     position: absolute;
     left: 45%;
     width: 5px;
@@ -95,14 +106,12 @@ li .menu-cir {
     content: "";
     opacity: 0;
     transition: all 0.3s;
-}
-
-.menu-items ul li a:after {
     bottom: -5px;
     transform: translateY(10px);
 }
 
-.menu-items ul li a:hover:after {
+#menu-items ul li a:focus-within,
+#menu-items ul li a:hover:after {
     opacity: 1;
     transform: translateY(7px);
 }
@@ -138,11 +147,12 @@ li .menu-cir {
     color: white;
 }
 
-#menu-active {
+
+/* #menu-items .menu-active {
     color: white;
 }
 
-#menu-active:after {
+#menu-items .menu-active:after {
     position: absolute;
     left: 45%;
     width: 5px;
@@ -153,3 +163,4 @@ li .menu-cir {
     opacity: 1;
     transform: translateY(7px);
 }
+ */
