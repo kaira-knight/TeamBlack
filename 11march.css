@@ -1,0 +1,91 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'gillroy';
+}
+hmtl, body { 
+   height: 100%;
+   width: 100%;
+
+
+}
+
+.bodyy{
+   
+   background-color: rgb(63, 60, 60);
+}
+.first{
+    height: 800px;
+    background-image: url("jurassic.jpg");
+    background-size: cover;
+
+}
+.jur{
+    /* padding-top: 280px; */
+    padding-left: 30px;
+    color: white;
+    font-size: 86px;
+}
+.jurp{
+    padding-top: 1px;
+    padding-left: 30px;
+    color: white;
+    font-size: 16px;
+}
+.jusrate{
+    padding-top: 280px;
+    padding-left: 30px;
+    color: white;
+    
+
+}
+ .red{
+    height: 25px;
+    width: 108px;
+    margin-left: 40px;
+    background-color: red;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+ }
+ .black{
+    height: 25px;
+    width: 108px;
+    margin-left: 40px;
+    background-color: rgb(18, 159, 147);
+    color: aliceblue;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+ }
+ .mute{
+    height: 140px;
+    width: 98px;
+    background-image: url("mute.jpeg");
+    background-size: cover;
+
+
+ }
+ .mutecon{
+    height: 100%;
+    width: 98px;
+
+ }
+
+ .mutecon>img{
+   height: 140px;
+   width: 98px;
+   background-size: contain;
+
+}
+
+ 
+ .smallicon{
+   height: 160px;
+   width: 100vw;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+ }
