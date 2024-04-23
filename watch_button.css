@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.watch{
+    height: 100%;
+    width: 100%;
+    background-image: url(strangerthing.jpg);
+    background-size:  cover;
+    
+
+}
+
+.series{
+    display: flex;
+}
+
+.series p{
+    display: inline;
+
+    margin-top: 5px;
+    color: white;
+}
+
+#logo{
+    
+    height: 30px;
+}
+
+
+
+h1{
+    font-family : "netflix sans";
+    font-size: 5vw;
+    color: white;
+}
+
+#text{
+    color: white;
+    height: 15vh;
+    width: 33vw;
+}
+
+#playbutton{
+    height: 7vh;
+    width: 8vw;
+    border-radius: 5px;
+    border: none;
+    font-weight: bolder;
+}
+
+#more{
+    background-color: grey;
+    border: none;
+    font-weight: bolder;
+    color: white;
+    height: 7vh;
+    width: 8vw;
+    border-radius: 3px;
+   
+}
+
+
+
+#things{
+    margin-left: 55px;
+}
+
+#button{
+    display: flex;
+    gap: 15px;
+     margin-left: 25px;
+    
+}
+
+#trending{
+    margin-left: 20px;
+    margin-top: 70px;
+    color: white;
+}
+
+#movies{
+    display: flex;
+    height: 40vh;
+    width: 160vw;
+    margin-left: 13px;
+    gap: 5px;
+    
+}
+
+ 
+
+#box{
+    height: 100%;
+    width: 15%;
+}
+
+#box img{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition-property: all;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+   
+}
+
+#box :hover{
+    box-shadow: 0 0 15px 12px rgb(2, 2, 2);
+    transform: scale(1.1);
+}
+
+

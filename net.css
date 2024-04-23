@@ -1,0 +1,258 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color:gray;
+}
+.top{
+    height: 10%;
+    width: 90%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+.topleft{
+    color:rgba(255, 255, 255, 0.81);
+    font-size: 20px;
+}
+.topleft:hover{
+    scale: 1.5;
+}
+.topmid{
+    color:rgba(255, 255, 255, 0.81);
+    font-size: 20px;
+}
+.topmid:hover{
+    scale: 1.5;
+}
+.topright{
+    color:rgba(255, 255, 255, 0.81);
+    font-size: 20px;
+}
+.topright:hover{
+    scale: 1.5;
+}
+.topsearch{
+    height: 25px;
+    width: 150px;
+    border-radius: 20px;
+    padding-left: 1%;
+
+}
+
+.button{
+      height: 6.5%;
+      width: 90%;
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 5%;
+      padding-right: 5%;
+}
+.butt1,.butt2,.butt3,.butt4,.butt5,.butt6,.butt7,.butt8{
+    height: 30px;
+    width: 10%;
+    background-color: rgba(43, 43, 43, 0.95);
+    color: white;
+    border-radius: 20px;
+    border: none;
+}
+.butt1:hover,.butt2:hover,.butt3:hover,.butt4:hover,.butt5:hover,.butt6:hover,.butt7:hover,.butt8:hover{
+    background-color: red;
+    border: 5px solid red;
+    box-shadow: 2px 2px 5px red;
+}
+.head3{
+    height: 8%;
+    width: 90%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.head3left{
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 100;
+}
+.head3butt{
+    height: 30px;
+    width: 10%;
+    background-color: rgba(43, 43, 43, 0.95);
+    color: white;
+    border-radius: 20px;
+border: none;
+}
+.head3butt:hover{
+    background-color: red;
+    border: 5px solid red;
+    box-shadow: 2px 2px 5px red;
+}
+.drop1{
+    height: 30px;
+    width:5%;
+    border-radius: 20px;
+    background-color:rgba(43, 43, 43, 0.95) ;
+    color: white;
+    border: 2px solid rgba(43, 43, 43, 0.95);
+}
+.drop2{
+    height: 30px;
+    width:5%;
+    border-radius: 20px;
+    background-color:rgba(43, 43, 43, 0.95) ;
+    color: white;
+    border: 2px solid rgba(43, 43, 43, 0.95);
+}
+.container1{
+    height: 35%;
+    width: 95%;
+    background-color:rgba(0, 0, 0, 0.99);
+    display: flex;
+    justify-content: space-between;
+    align-items:top;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    
+}
+.card{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgb(94, 91, 91);
+}
+
+.card-img{
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-img>img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+
+}
+
+.card-img>img:hover{
+    scale: 1.2;
+}
+
+.card-details{
+    height: 10%;
+    width: 100%;
+
+}
+.card-bottom{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ .container2{
+    height: 35%;
+    width: 95%;
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 2.4%;
+
+}
+.sec-card{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    justify-content: top;
+    align-items: left;
+    flex-direction: column;
+    border-radius: 5%;
+    cursor: pointer;
+    
+    
+}
+.sec-card:hover{
+    box-shadow: 5px 5px 20px rgb(94, 91, 91);
+}
+
+.sec-card>img{
+    height: 80%;
+    width: 100%;
+    background-size: cover;
+}
+
+.sec-card-details{
+    height: 10%;
+    width: 100%;
+    
+
+}
+/* line ,star,eyes */
+.left1{
+    color: white;
+}
+#year{
+    color: rgb(140, 139, 139);
+    font-size: 13px;
+    font-weight: 200;
+}
+.heart{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.982);
+    margin-left: 60px;
+}
+.heart:hover{
+    scale: 1.5;
+    color: red;
+}
+.eye{
+    color: beige;
+}
+.star{
+    font-size: 10px;
+    color:rgb(255, 247, 0);
+}
+.star:hover{
+    scale: 1.5;
+}
+.num{
+    font-size: 15px;
+    color: gold;
+}
+
+
+.sec-card-bottom{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.card1in{
+    height:20% ;
+    width: 15%;
+    background-color: azure;
+    
+} 
