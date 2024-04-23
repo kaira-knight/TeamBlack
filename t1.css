@@ -1,0 +1,219 @@
+/* Import Google font - Poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.wrapper_d {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper_d i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper_d i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper_d i:first-child {
+    left: -22px;
+}
+
+.wrapper_d i:last-child {
+    right: -22px;
+}
+
+.wrapper_d .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 6) - 2px);
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    background: black;
+}
+
+.carousel .card:hover {
+    background: white;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card,
+.img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 350px;
+    width: 203px;
+    list-style: none;
+    background: black;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.carousel .card .sld-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 275px;
+    width: 200px;
+    position: relative;
+}
+
+.carousel .card .sld-img .sld-cir {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 43%;
+    left: 39%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.carousel .card .sld-img .sld-cir .tri {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid white;
+    border-bottom: 10px solid transparent;
+    margin-left: 5px;
+}
+
+.card .sld-img img {
+    width: 95%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+}
+
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+    opacity: 0;
+    width: 100%;
+}
+
+.carousel .card .sld-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    width: 185px;
+}
+
+.carousel .card p {
+    color: #6A6D78;
+    font-size: 0.51rem;
+}
+
+.carousel .card:hover h2 {
+    opacity: 1;
+}
+
+.carousel .card:hover .sld-img .sld-cir {
+    opacity: 1;
+}
+
+.carousel .card:hover .sld-details,
+h2 {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1100px) {
+    .wrapper_d .carousel {
+        grid-auto-columns: calc((100% / 5) - 9px);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .wrapper_d .carousel {
+        grid-auto-columns: calc((100% / 4) - 9px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper_d .carousel {
+        grid-auto-columns: calc((100% / 3) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper_d .carousel {
+        grid-auto-columns: calc((100% / 2.5) - 9px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper_d .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .wrapper_d .carousel {
+        grid-auto-columns: calc((100% / 1.5) - 9px);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .wrapper_d .carousel {
+        grid-auto-columns: calc((100% / 1) - 9px);
+    }
+}

@@ -1,0 +1,270 @@
+/* Import Google font - Poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: black;
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3.9) - 2px);
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    background: black;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .box-card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel .box-card {
+    scroll-snap-align: start;
+    height: 350px;
+    width: 203px;
+    list-style: none;
+    background: black;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 5) - 9px);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 4) - 9px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 3) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2.5) - 9px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 1.5) - 9px);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 1) - 9px);
+    }
+}
+
+.carousel .box-card {
+    padding: 1%;
+    width: 25vw;
+    height: 75px;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.logo {
+    height: 100%;
+    width: 20%;
+    position: relative;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.carousel .box-card:hover .logo::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.500);
+}
+
+.logo>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.box-video-element {
+    display: flex;
+    z-index: 6;
+}
+
+.box-video-cir {
+    width: 45px;
+    height: 45px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 27.5%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.box-tri {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 16px solid white;
+    border-bottom: 8px solid transparent;
+    margin-left: 5px;
+}
+
+.box-video-details {
+    left: 20%;
+    top: 0%;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 1%;
+    z-index: 5;
+    position: absolute;
+    scale: 0.9;
+    transition: 0.3s;
+}
+
+.box-video-details>h3 {
+    margin-top: -5px;
+    color: white;
+}
+
+.box-video-details>p {
+    color: grey;
+}
+
+.pro-bar {
+    width: 90%;
+    height: 5%;
+    background-color: #dadada;
+}
+
+.progress-bar {
+    width: 30%;
+    height: 100%;
+    background-color: #ff0303;
+}
+
+.box-video-icon {
+    width: 23px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 77%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.carousel .box-card:hover .logo {
+    width: 90%;
+}
+
+.carousel .box-card:hover .logo>img {
+    object-fit: cover;
+}
+
+.carousel .box-card:hover .box-video-cir {
+    opacity: 1;
+}
+
+.carousel .box-card:hover .box-video-icon {
+    opacity: 1;
+}
+
+.carousel .box-card:hover .box-video-details {
+    scale: 1.01;
+}
