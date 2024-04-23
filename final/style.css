@@ -5,6 +5,17 @@ body {
     color: #eee;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.title_id>h1 {
+    margin: 0;
+    padding-left: 2%;
+    user-select: none;
+    text-decoration: underline;
+}
+
 svg {
     width: 25px;
 }
